@@ -1,0 +1,129 @@
+/* Base Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Logo Styles */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Nav Links Styles */
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  /* Nav Links Styling */
+  .nav-links li a {
+    text-decoration: none;
+    color: rgb(1, 97, 136);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #d61515;
+  }
+  
+  /* Dropdown Menu Styles */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 100%; /* Ensure dropdown appears below the link */
+    left: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    border-radius: 5px;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li a {
+    color: rgb(1, 97, 136);
+    font-size: 16px;
+    text-align: left;
+    text-decoration: none;
+    padding: 8px 20px;
+    display: block;
+  }
+  
+  .dropdown-menu li a:hover {
+    color: #d61b1b;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+  }
+  
+  /* Mobile Menu Styles */
+  .mobile-menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  /* Mobile-specific Navbar */
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #0e1e25;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 10px;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links-mobile li a {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+  
+  .nav-links-mobile li a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Make navbar responsive on small screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .mobile-menu-icon {
+      display: block;
+    }
+  }
+  
